@@ -17,7 +17,6 @@ public class Vote extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	private Integer optionId;
 	private String title;
 	private String description;
 	private Date startTime;
@@ -34,14 +33,6 @@ public class Vote extends BaseEntity {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Integer getOptionId() {
-		return optionId;
-	}
-
-	public void setOptionId(Integer optionId) {
-		this.optionId = optionId;
 	}
 
 	public String getTitle() {

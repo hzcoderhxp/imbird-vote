@@ -18,10 +18,11 @@
 			<Pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
 		</encoder>
 	</appender>
-
+	
 	<springProfile>
 		<root level="WARN">
 			<appender-ref ref="STBRollingFileAppender" />
 		</root>
 	</springProfile>
+	
 </configuration>
