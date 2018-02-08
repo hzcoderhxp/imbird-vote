@@ -52,11 +52,6 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 
 		</dependency>
-		<dependency>
-			<groupId>cn.stlc</groupId>
-			<artifactId>stone-security</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 
 		<!--Mybatis -->
 		<dependency>
