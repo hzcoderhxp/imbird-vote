@@ -29,13 +29,7 @@
 
 <select id="getLatestedVotes"  resultType="com.stone.service.core.domain.Vote">
         select * from i_vote where 1=1
-        <if test="startTime != null">
-            and add_time&gt;=#{startTime}
-        </if>
-        <if test="endTime != null">
-            and add_time&lt;#{endTime}
-        </if>
-        order by id DESC;
+        order by id DESC limit #{endTime},5;
     </select>
 
 </mapper>

@@ -1,6 +1,5 @@
 package com.stone.service.core;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,8 @@ public class VoteService extends BaseService<Vote>{
 	@Autowired
 	private VoteMapper voteMapper;
 
-	public List<Vote> getLatestedVotes(Date startTime , Date endTime) {
-		return voteMapper.getLatestedVotes(startTime,endTime);
+	public List<Vote> getLatestedVotes(Integer rows) {
+		return voteMapper.getLatestedVotes(rows);
 	}
 
 }
