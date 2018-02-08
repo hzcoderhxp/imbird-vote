@@ -17,7 +17,7 @@ public class VoteManager {
 	private VoteService voteService;
 
 	public List<Vote> getLatestedVotes(Integer row) {
-		Integer inputRow = row == null ? 1 : row;
+		Integer inputRow = row == null ? 0 : row;
 		Integer rows = weight * inputRow;
 		return voteService.getLatestedVotes(rows);
 	}
