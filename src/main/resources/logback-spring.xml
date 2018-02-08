@@ -20,7 +20,7 @@
 	</appender>
 	
 	<springProfile>
-		<root level="WARN">
+		<root level="INFO">
 			<appender-ref ref="STBRollingFileAppender" />
 		</root>
 	</springProfile>
