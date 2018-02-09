@@ -23,9 +23,6 @@
 					- %msg %n</Pattern>
 			</encoder>
 		</appender>
-	</springProfile>
-	
-	<springProfile>
 		<root level="INFO">
 			<appender-ref ref="STBRollingFileAppender" />
 		</root>

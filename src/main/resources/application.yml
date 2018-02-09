@@ -32,8 +32,7 @@ logging:
       audit: error
       resultset: error
       sqlonly: error
-  config: classpath:logback-spring.xml      
       
-env:
-  home:
-    path: /home/admin/release/     
+env: 
+  home: 
+    path: /home/admin/release
