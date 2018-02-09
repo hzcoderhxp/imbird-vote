@@ -1,6 +1,5 @@
 server:
   port: 8810
-  inner.port: 8811
   context-path: /
 spring:
   aop:
@@ -10,21 +9,21 @@ spring:
     username: root
     password: 123456
     # 使用druid数据源
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    filters: stat
-    maxActive: 500
-    initialSize: 1
-    maxWait: 100
-    minIdle: 100
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20 
+    druid:
+      filters: stat
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=100
+      maxActive: 300
+      initialSize: 1
+      maxWait: 10000
+      minIdle: 100
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 100
     
 
 logging:
