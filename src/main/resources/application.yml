@@ -1,5 +1,6 @@
 server:
   port: 8810
+  inner.port: 8811
   context-path: /
 spring:
   aop:
