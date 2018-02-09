@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class CommonConfig {
-    @Value("${server.inner.port}")
+    @Value("${server.port}")
     private Integer port;
 
     @Bean
