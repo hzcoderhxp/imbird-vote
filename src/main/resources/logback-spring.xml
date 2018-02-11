@@ -6,13 +6,14 @@
 	<include resource="org/springframework/boot/logging/logback/base.xml" />
 	<turboFilter class="com.stone.logging.ThreadLevelFilter" />
 
-	<springProfile>
+	<springProfile name="prod">
 		<appender name="STBRollingFileAppender"
 			class="ch.qos.logback.core.rolling.RollingFileAppender">
 			<File>${homePath}/logs/${APP_NAME}.log</File>
 			<rollingPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-				<fileNamePattern>${homePath}/logs/${APP_NAME}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+				<fileNamePattern>${homePath}/logs/${APP_NAME}.%d{yyyy-MM-dd}.%i.log
+				</fileNamePattern>
 				<maxFileSize>100MB</maxFileSize>
 				<maxHistory>60</maxHistory>
 				<totalSizeCap>20GB</totalSizeCap>
@@ -23,6 +24,17 @@
 					- %msg %n</Pattern>
 			</encoder>
 		</appender>
+		<root level="INFO">
+			<appender-ref ref="STBRollingFileAppender" />
+		</root>
+	</springProfile>
+
+	<springProfile name="dev">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+	<springProfile name="prod">
 		<root level="INFO">
 			<appender-ref ref="STBRollingFileAppender" />
 		</root>
