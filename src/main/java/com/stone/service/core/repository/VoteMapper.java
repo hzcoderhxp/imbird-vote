@@ -11,4 +11,6 @@ public interface VoteMapper  extends BaseMapper<Vote>{
 
 	List<Vote> getLatestedVotes(@Param("rows") Integer rows);
 
+	List<Vote> searchVotes(@Param("inputVal")String inputVal);
+
 }

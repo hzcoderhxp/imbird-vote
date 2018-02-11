@@ -30,9 +30,9 @@ public class VoteController {
 		return voteManager.getLatestedVotes(row);
 	}
 	
-	@RequestMapping(value = "/search/{inputVal}/{date}",method = RequestMethod.GET)
-	public List<Vote> searchVotes(@PathVariable String inputVal , @PathVariable String date){
-		return voteManager.searchVotes(inputVal , date);
+	@RequestMapping(value = "/search/{inputVal}",method = RequestMethod.GET)
+	public List<Vote> searchVotes(@PathVariable String inputVal){
+		return voteManager.searchVotes(inputVal);
 	}
 
 }

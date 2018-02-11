@@ -22,8 +22,9 @@ public class VoteManager {
 		return voteService.getLatestedVotes(rows);
 	}
 	
-	public List<Vote> searchVotes(String inputVal , String date){
-		return null;
+	public List<Vote> searchVotes(String inputVal){
+		
+		return voteService.searchVotes(inputVal);
 	}
 
 }

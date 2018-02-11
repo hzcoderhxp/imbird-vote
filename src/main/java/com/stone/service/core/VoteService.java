@@ -19,4 +19,8 @@ public class VoteService extends BaseService<Vote>{
 		return voteMapper.getLatestedVotes(rows);
 	}
 
+	public List<Vote> searchVotes(String inputVal) {
+		return voteMapper.searchVotes(inputVal);
+	}
+
 }

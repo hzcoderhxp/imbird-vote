@@ -31,5 +31,11 @@
         select * from i_vote where 1=1
         order by id DESC limit #{rows},5;
     </select>
+    
+<select id="searchVotes"  resultType="com.stone.service.core.domain.Vote">
+        select * from i_vote where 1=1
+        and title like '%${inputVal}%'
+        order by id DESC;
+    </select>    
 
 </mapper>
